@@ -115,7 +115,7 @@ class CustomerRepositoryTest {
 
 	@Test
 	@Order(7)
-	public void getListOfCustomerTest() {
+	void getListOfCustomerTest() {
 
 		List<Customer> customers = customerRepository.findAll();
 
