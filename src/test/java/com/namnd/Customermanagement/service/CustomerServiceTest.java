@@ -1,7 +1,7 @@
 package com.namnd.Customermanagement.service;
 
-import com.namnd.Customermanagement.dto.CustomerDto;
 import com.namnd.Customermanagement.model.Customer;
+import org.assertj.core.api.Assertions;
 import org.junit.Ignore;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -10,13 +10,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import java.util.List;
-import java.util.Optional;
-
-import org.assertj.core.api.Assertions;
 
 /**
  * @author nam.nd
@@ -34,7 +31,7 @@ class CustomerServiceTest {
 	@Test
 	@Rollback(value = false)
 	void testCreateCustomer() {
-		CustomerDto customer = new CustomerDto();
+		Customer customer = new Customer();
 		customer.setName("Nghiem Duc Nam");
 		customer.setAge(25);
 		customer.setEmail("namnd0312@gmail.com");
@@ -71,7 +68,7 @@ class CustomerServiceTest {
 	@Test
 	@Rollback(value = false)
 	void testUpdateCustomer() {
-		CustomerDto cus = customerService.findCustomerById(1L);
+		Customer cus = customerService.findCustomerById(1L);
 
 		assertNotNull(cus);
 

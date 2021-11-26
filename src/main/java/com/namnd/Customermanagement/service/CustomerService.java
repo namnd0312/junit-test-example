@@ -1,15 +1,12 @@
 package com.namnd.Customermanagement.service;
 
-import com.namnd.Customermanagement.dto.CustomerDto;
 import com.namnd.Customermanagement.model.Customer;
-
-import antlr.collections.List;
 
 public interface CustomerService {
 
-    Customer createCustomer(CustomerDto customerDto);
+    Customer createCustomer(Customer customer);
 
-    Customer updateCustomer(CustomerDto customerDto);
+    Customer updateCustomer(Customer customer);
 
     Customer findCustomerByEmail(String email);
 

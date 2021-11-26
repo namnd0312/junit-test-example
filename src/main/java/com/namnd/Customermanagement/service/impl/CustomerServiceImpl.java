@@ -1,23 +1,21 @@
 package com.namnd.Customermanagement.service.impl;
 
-import com.namnd.Customermanagement.dto.CustomerDto;
 import com.namnd.Customermanagement.model.Customer;
 import com.namnd.Customermanagement.service.CustomerService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
     @Override
-    public Customer createCustomer(CustomerDto customerDto) {
+    public Customer createCustomer(Customer customer) {
         return null;
     }
 
     @Override
-    public Customer updateCustomer(CustomerDto customerDto) {
+    public Customer updateCustomer(Customer customer) {
         return null;
     }
 
